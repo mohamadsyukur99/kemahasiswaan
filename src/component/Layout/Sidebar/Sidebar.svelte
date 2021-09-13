@@ -44,8 +44,8 @@
                     </button>
                     {#if menu.isOpen == true}
                     {#each menu.child as childMenu}
-                    <div class="flex w-full bg-gray-50 hover:border-indigo-500 hover:bg-indigo-50 border-l-4 {childMenu.code == $menuStore.code ? Active+"  ":""}" transition:slide>
-                        <button on:click="{()=>menuHandlerClick(childMenu)}" class=" pl-54 py-2 h-10 px-14 block text-sm text-gray-600  text-gray-600 hover:text-gray-800  border-transparent   pr-4">
+                    <div on:click="{()=>menuHandlerClick(childMenu)}" class="cursor-pointer flex w-full bg-gray-50 hover:border-indigo-500 hover:bg-indigo-50 border-l-4 {childMenu.code == $menuStore.code ? Active+"  ":""}" transition:slide>
+                        <button  class=" pl-54 py-2 h-10 px-14 block text-sm text-gray-600  text-gray-600 hover:text-gray-800  border-transparent   pr-4">
                             <span class=" text-sm tracking-wide truncate">{childMenu.name}</span>
                         </button>
                     </div>
