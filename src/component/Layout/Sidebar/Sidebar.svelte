@@ -53,8 +53,8 @@
                     {/if}
                 </div>
                 {:else}
-                <div class="flex flex-col space-y-1">
-                    <button on:click="{()=>menuHandlerClick(menu)}" class="{menu.code == $menuStore.code ? Active:""} h-11 w-full flex justify-between items-center text-gray-600 cursor-pointer hover:bg-indigo-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-4 focus:outline-none">
+                <div on:click="{()=>menuHandlerClick(menu)}" class="cursor-pointer flex flex-col space-y-1">
+                    <button  class="{menu.code == $menuStore.code ? Active:""} h-11 w-full flex justify-between items-center text-gray-600 cursor-pointer hover:bg-indigo-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-4 focus:outline-none">
                         <span class="flex items-center ml-6 text-gray-500">
                             <i class="fa fa-{menu.icon}"></i>
                             <span class="ml-5 text-sm tracking-wide truncate">{menu.name}</span>
